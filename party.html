@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = prompt("Enter your age:");
+        age = Number(age);
+    
+        if (age < 18) {
+            alert("Sorry, you are not allowed to enter the party.");
+        } else if (age >= 18 && age <= 24) {
+            alert("Welcome to the party,coke only!");
+        }else if(age>25 && age<=35){
+            alert("Limited beer and coke!");
+        }else if(age>35 && age<=39){
+            alert("you are allowed to drink beer and coke!");
+        }else{
+            alert("too old for party!");
+        
+        }
+        
+    </script>
+</body>
+</html>

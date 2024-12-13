@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <form action="">
+    <input type="number" id="num1" class="in" placeholder="First Number"><br><br>
+    <input type="number" id="num2" class="in" placeholder="Second Number"><br><br>
+    <input class="butt" type="button" onclick="add()" value="+"> &nbsp;
+    <input  class="butt" type="button" onclick="subs()" value="-"> &nbsp;
+    <input  class="butt" type="button" onclick="mult()" value="x"> &nbsp;
+    <input  class="butt" type="button" onclick="div()" value="/"> <br><br>
+    <input  type="text" id="result" readonly placeholder="Result" class="in"><br><br>
+    <input type="reset" name="" id="" class="butt">
+</form>
+
+    
+    <script>
+        function add() {
+            let x = parseInt(document.getElementById('num1').value) || 0;
+            let y = parseInt(document.getElementById('num2').value) || 0;
+            let sum = x + y;
+            document.getElementById('result').value = sum;
+        }
+        
+        function subs() {
+            let x = parseInt(document.getElementById('num1').value) || 0;
+            let y = parseInt(document.getElementById('num2').value) || 0;
+            let difference = x - y;
+            document.getElementById('result').value = difference;
+        }
+        
+        function mult() {
+            let x = parseInt(document.getElementById('num1').value) || 0;
+            let y = parseInt(document.getElementById('num2').value) || 0;
+            let product = x * y;
+            document.getElementById('result').value = product;
+        }
+        
+        function div() {
+            let x = parseInt(document.getElementById('num1').value) || 0;
+            let y = parseInt(document.getElementById('num2').value) || 0;
+            let quotient = y !== 0 ? x / y : "Error";
+            document.getElementById('result').value = quotient;
+        }
+    </script>
+</body>
+</html>

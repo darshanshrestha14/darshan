@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    .red_box{
+        width:200px;
+        height: 200px;
+        margin-top:10px;
+        background: red;
+    }
+    .green_box{
+        width:200px;
+        height: 200px;
+        background: rgb(6, 233, 47);
+        display: flex;
+        margin-top: 10px;
+    }
+    .blue_box{
+        width:200px;
+        height: 200px;
+        background: rgb(0, 42, 255);
+    }
+    </style>
+    <div id="result"></div>
+    <script>
+        let i;
+        
+        let blue = "<div class='blue_box'></div>";
+        
+        for(i=0;i<10;i++){
+            if(i<5){
+                let red = "<div class='red_box'></div>";
+                document.getElementById('result').innerHTML += red;
+            }
+            else{
+                let green = "<div class='green_box'></div>";
+                document.getElementById('result').innerHTML += green;
+            }
+        }
+    </script>
+</body>
+</html>
