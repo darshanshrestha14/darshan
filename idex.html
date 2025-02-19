@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <blockquote>
+        <h1><center>Products</center></h1>
+        <table border="2"width="100%">
+            <thead>
+                <tr>
+                    <th>s.n</th>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>qantity</th>
+                </tr>
+            </thead>
+            <tbody id="result"></tbody>
+        </table>
+    </blockquote>
+    <script>
+        // let student={
+        //     name:'ram',
+        //     age:12,
+        //     address:'ktm',
+        //     contact:{
+        //     phone:976555555554,
+        //     email:"shresthadarshan@gmail.com"
+        //     }
+        // }
+        // console.log(student.name)
+        let products=[
+            {'name':'laptop','price':1000},
+            {'name':'tv','price':1000},
+            {'name':'laptop','price':1000}
+        ]
+        console.log(products[0].name)
+        console.log(products[1].name)
+        let output=''
+        for(let i=0;i<products.length;i++){
+            output+=`<tr>
+            <td>${i+1}</td>
+            <td>${products[i].name}</td>
+            <td>${products[i].price}</td>
+            <td>${products[i].qauntity}</td>
+           `   
+        }
+        document.getElementById('result').innerHTML=output
+    </script>
+</body>
+</html>
